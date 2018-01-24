@@ -1,0 +1,1 @@
+var linkClicked=function(){},initStateChange=function(){createObj=null,hljs.configure({classPrefix:"hljs-",tabReplace:null,useBR:!1,languages:void 0})},newPageReady=function(){},transitionCompleted=function(){"function"==typeof createObj&&createObj()};
