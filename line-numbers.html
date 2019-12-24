@@ -1,40 +1,223 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Line numbers | highlight.js - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="Line numbers | highlight.js - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/hljs/favicon.ico"><link rel="stylesheet" href="./css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">highlight.js - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="./index.html">Home</a></li><li><a class="getting-started" href="./getting-started.html">Getting Started</a></li><li><span onclick="toggleApi()">Library API</span><ul class="hidden" id="navi_api"><li><a href="./api/highlight.html">.highlight()</a></li><li><a href="./api/highlight-auto.html">.highlightAuto()</a></li><li><a href="./api/fix-markup.html">.fixMarkup()</a></li><li><a href="./api/highlight-block.html">.highlightBlock()</a></li><li><a href="./api/configure.html">.configure()</a></li><li><a href="./api/init-highlighting.html">.initHighlighting()</a></li><li><a href="./api/init-highlighting-onload.html">.initHighlightingOnLoad()</a></li><li><a href="./api/register-language.html">.registerLanguage()</a></li><li><a href="./api/list-languages.html">.listLanguages()</a></li><li><a href="./api/get-language.html">.getLanguage()</a></li></ul></li><li><a class="languageGuide" href="./language-guide.html">Language definition guide</a><ul class="hidden" id="navi_languageGuide"><li><a href="./language-guide.html#highlighting-overview">ハイライトの概要</a></li><li><a href="./language-guide.html#general-syntax">一般的な構文</a></li><li><a href="./language-guide.html#keywords">キーワード</a></li><li><a href="./language-guide.html#sub-modes">サブモード</a></li><li><a href="./language-guide.html#comments">コメント</a></li><li><a href="./language-guide.html#markup-generation">マークアップ</a></li><li><a href="./language-guide.html#mode-attributes">モード属性</a></li><li><a href="./language-guide.html#relevance">コードの関連性</a></li><li><a href="./language-guide.html#illegal-symbols">不正シンボル</a></li><li><a href="./language-guide.html#pre-defined-modes">定義済みのモードと正規表現</a></li></ul></li><li><a class="reference" href="./reference.html">Mode reference</a><ul class="hidden" id="navi_reference"><li><a href="./reference.html#types">各属性値の型</a></li><li><a href="./reference.html#attributes">属性</a><ul><li><a href="./reference.html#case_insensitive">case_insensitive</a></li><li><a href="./reference.html#aliases">aliases</a></li><li><a href="./reference.html#className">className</a></li><li><a href="./reference.html#begin">begin</a></li><li><a href="./reference.html#end">end</a></li><li><a href="./reference.html#beginKeywords">beginKeywords</a></li><li><a href="./reference.html#endsWithParent">endsWithParent</a></li><li><a href="./reference.html#endsParent">endsParent</a></li><li><a href="./reference.html#lexemes">lexemes</a></li><li><a href="./reference.html#keywords">keywords</a></li><li><a href="./reference.html#illegal">illegal</a></li><li><a href="./reference.html#exclude">excludeBegin, excludeEnd</a></li><li><a href="./reference.html#returnBegin">returnBegin</a></li><li><a href="./reference.html#returnEnd">returnEnd</a></li><li><a href="./reference.html#contains">contains</a></li><li><a href="./reference.html#starts">starts</a></li><li><a href="./reference.html#variants">variants</a></li><li><a href="./reference.html#subLanguage">subLanguage</a></li><li><a href="./reference.html#skip">skip</a></li></ul></li></ul></li><li><span onclick="cssClassRef()">CSS classes reference</span><ul class="hidden" id="navi_cssClassRef"><li><a href="./css-class-ref/stylable-class.html">指定可能なクラス</a></li><li><a href="./css-class-ref/language-name.html">言語名とエイリアス</a></li></ul></li><li><a class="styleGuide" href="./style-guide.html">Style guide</a><ul class="hidden" id="navi_styleGuide"><li><a href="./style-guide.html#key-principle">基本的な方針</a></li><li><a href="./style-guide.html#defining-a-theme">テーマの定義</a></li><li><a href="./style-guide.html#typography-n-layout">タイポグラフィとレイアウトの注意事項</a></li><li><a href="./style-guide.html#subst">.subst</a></li><li><a href="./style-guide.html#contributing">コントリビュート</a></li></ul></li><li><a class="languageCheckList" href="./language-check-list.html">Language contributor checklist</a><ul class="hidden" id="navi_languageCheckList"><li><a href="./language-check-list.html#put-language-definition">1. 言語定義の.jsファイルを追加</a></li><li><a href="./language-check-list.html#provide-meta-data">2. メタデータの挿入</a></li><li><a href="./language-check-list.html#code-example">3. コード例の作成</a></li><li><a href="./language-check-list.html#write-class-reference">4. クラスリファレンス作成</a></li><li><a href="./language-check-list.html#add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</a></li><li><a href="./language-check-list.html#pull-request">6. プルリクエストを作成</a></li></ul></li><li><a class="buildAndTest" href="./building-n-testing.html">Building and testing</a><ul class="hidden" id="navi_buildAndTest"><li><a href="./building-n-testing.html#building">ビルド</a></li><li><a href="./building-n-testing.html#basic-testing">基本テスト</a></li><li><a href="./building-n-testing.html#testing-markup">マークアップテスト</a></li></ul></li><li><a class="releaseProcess" href="./release-process.html">Release process</a></li><li><a class="lineNumbers active" href="./line-numbers.html">Line numbers</a></li><li><a class="newLanguages" href="./new-languages.html">On requesting new languages</a></li><li><a class="other" href="./other.html">Other</a></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>Line numbers</h1><div id="update_date"><span>更新日: 2018.06.14
-</span></div><p>highlight.jsが行番号を表示しないのは、
-機能の見落としではなく、想定通りの処理です。
-以下は、現在のプロジェクトメンテナーからのポリシーの説明です。</p><blockquote class="comment"><p>highlight.jsの開発当初からの設計原則の一つは"シンプルさ"でした。
-コードの単純さではなく(実際、かなり複雑です)、
-使い方と、HTML上でハイライトされたスニペットの見栄えです。
-多くのハイライターは、
-1つの語句ごとに色を分けたり、背景をストライプにしたり、
-コードブロックの周りに派手なボタンがあったり、
-そして、そう、行番号があったり、
-私はやり過ぎだと思います。
-コードの周りに派手なものがあるほど、
-ユーザーの気が逸れて理解しにくくなってしまいます。</p><p>これは簡単に決断したわけではありません。
-この目新しい仕様は、highlight.jsをより良くするだけではなく、
-それを作ることによって、インターネット上のブログ記事を肥大化させ、
-悪化させるだけかもしれません。
-これが私が人々に"それだけの価値がある"ことを示す理由です。</p><p>これまで行番号をサポートする唯一のユースケースは、
-コードブロック外の記述からコードを参照する場合です。
-私自身のブログでは、コード自体のコメントを使って
-大きなスニペットを小さなスニペットに分割し、
-それぞれを別々に記述することで、解決してきました。
-私がそれが良い解決法だと言っているわけではありません。
-しかし、行番号をどのように表示した方が良いかは分かりません。
-それらを判断する唯一の方法は、
-この件について、いくつかのユーザービリティを調査し、
-どちらが良いか比べるしかありません。
-誰かがやったところで気にしないでしょう。</p><p>そしてメンテナンスがあります。
-これまでhighlight.jsのコアコードは1人の人間が管理してきました。-- 私ですが。
-hilight.jsに新しいコードを埋め込むということは、
-その瞬間、バグを修正し、改善しなければならず、
-残りのコードと共に動作させ、そのデザインを守らなければならないことを意味します。
-そして、それは私にとって"evil"であるとみなし、
-私自身が使うことは無い機能を作りたいとは思いません。</p></blockquote><br><p>この見解・態度は<a href="https://groups.google.com/forum/#!forum/highlightjs" target="_blank" rel="noopener noreferrer">議論の対象</a>になります。
-また、誰もコードをforkし、行番号の表示を実装することを止めません。</p><br><br><div class="license"><p>&copy; 2006
- Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for details.</p><p>このコンテンツは<a href="https://highlightjs.readthedocs.io/en/latest/">highlightjsドキュメント</a>を翻訳/改変したものです。</p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="./css/lazy.css" rel="stylesheet"></noscript><script src="./js/main.js" defer></script><script src="./js/highlight.pack.js"></script><div id="src" hidden></div></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Line numbers | highlight.js - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Line numbers | highlight.js - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/hljs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="./js/toggleTheme.js" data-dir="hljs"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">highlight.js - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="./index.html">Home</a></li>
+          <li><a class="getting-started" href="./getting-started.html">Getting Started</a></li>
+          <li><span onclick="toggleApi()">Library API</span>
+            <ul class="hidden" id="navi_api">
+              <li><a href="./api/highlight.html">.highlight()</a></li>
+              <li><a href="./api/highlight-auto.html">.highlightAuto()</a></li>
+              <li><a href="./api/fix-markup.html">.fixMarkup()</a></li>
+              <li><a href="./api/highlight-block.html">.highlightBlock()</a></li>
+              <li><a href="./api/configure.html">.configure()</a></li>
+              <li><a href="./api/init-highlighting.html">.initHighlighting()</a></li>
+              <li><a href="./api/init-highlighting-onload.html">.initHighlightingOnLoad()</a></li>
+              <li><a href="./api/register-language.html">.registerLanguage()</a></li>
+              <li><a href="./api/list-languages.html">.listLanguages()</a></li>
+              <li><a href="./api/get-language.html">.getLanguage()</a></li>
+            </ul>
+          </li>
+          <li><a class="languageGuide" href="./language-guide.html">Language definition guide</a>
+            <ul class="hidden" id="navi_languageGuide">
+              <li><a href="./language-guide.html#highlighting-overview">ハイライトの概要</a></li>
+              <li><a href="./language-guide.html#general-syntax">一般的な構文</a></li>
+              <li><a href="./language-guide.html#keywords">キーワード</a></li>
+              <li><a href="./language-guide.html#sub-modes">サブモード</a></li>
+              <li><a href="./language-guide.html#comments">コメント</a></li>
+              <li><a href="./language-guide.html#markup-generation">マークアップ</a></li>
+              <li><a href="./language-guide.html#mode-attributes">モード属性</a></li>
+              <li><a href="./language-guide.html#relevance">コードの関連性</a></li>
+              <li><a href="./language-guide.html#illegal-symbols">不正シンボル</a></li>
+              <li><a href="./language-guide.html#pre-defined-modes">定義済みのモードと正規表現</a></li>
+            </ul>
+          </li>
+          <li><a class="reference" href="./reference.html">Mode reference</a>
+            <ul class="hidden" id="navi_reference">
+              <li><a href="./reference.html#types">各属性値の型</a>
+              </li>
+              <li><a href="./reference.html#attributes">属性</a>
+                <ul>
+                  <li><a href="./reference.html#case_insensitive">case_insensitive</a></li>
+                  <li><a href="./reference.html#aliases">aliases</a></li>
+                  <li><a href="./reference.html#className">className</a></li>
+                  <li><a href="./reference.html#begin">begin</a></li>
+                  <li><a href="./reference.html#end">end</a></li>
+                  <li><a href="./reference.html#beginKeywords">beginKeywords</a></li>
+                  <li><a href="./reference.html#endsWithParent">endsWithParent</a></li>
+                  <li><a href="./reference.html#endsParent">endsParent</a></li>
+                  <li><a href="./reference.html#lexemes">lexemes</a></li>
+                  <li><a href="./reference.html#keywords">keywords</a></li>
+                  <li><a href="./reference.html#illegal">illegal</a></li>
+                  <li><a href="./reference.html#exclude">excludeBegin, excludeEnd</a></li>
+                  <li><a href="./reference.html#returnBegin">returnBegin</a></li>
+                  <li><a href="./reference.html#returnEnd">returnEnd</a></li>
+                  <li><a href="./reference.html#contains">contains</a></li>
+                  <li><a href="./reference.html#starts">starts</a></li>
+                  <li><a href="./reference.html#variants">variants</a></li>
+                  <li><a href="./reference.html#subLanguage">subLanguage</a></li>
+                  <li><a href="./reference.html#skip">skip</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="cssClassRef()">CSS classes reference</span>
+            <ul class="hidden" id="navi_cssClassRef">
+              <li><a href="./css-class-ref/stylable-class.html">指定可能なクラス</a></li>
+              <li><a href="./css-class-ref/language-name.html">言語名とエイリアス</a></li>
+            </ul>
+          </li>
+          <li><a class="styleGuide" href="./style-guide.html">Style guide</a>
+            <ul class="hidden" id="navi_styleGuide">
+              <li><a href="./style-guide.html#key-principle">基本的な方針</a></li>
+              <li><a href="./style-guide.html#defining-a-theme">テーマの定義</a></li>
+              <li><a href="./style-guide.html#typography-n-layout">タイポグラフィとレイアウトの注意事項</a></li>
+              <li><a href="./style-guide.html#subst">.subst</a></li>
+              <li><a href="./style-guide.html#contributing">コントリビュート</a></li>
+            </ul>
+          </li>
+          <li><a class="languageCheckList" href="./language-check-list.html">Language contributor checklist</a>
+            <ul class="hidden" id="navi_languageCheckList">
+              <li><a href="./language-check-list.html#put-language-definition">1. 言語定義の.jsファイルを追加</a></li>
+              <li><a href="./language-check-list.html#provide-meta-data">2. メタデータの挿入</a></li>
+              <li><a href="./language-check-list.html#code-example">3. コード例の作成</a></li>
+              <li><a href="./language-check-list.html#write-class-reference">4. クラスリファレンス作成</a></li>
+              <li><a href="./language-check-list.html#add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</a></li>
+              <li><a href="./language-check-list.html#pull-request">6. プルリクエストを作成</a></li>
+            </ul>
+          </li>
+          <li><a class="buildAndTest" href="./building-n-testing.html">Building and testing</a>
+            <ul class="hidden" id="navi_buildAndTest">
+              <li><a href="./building-n-testing.html#building">ビルド</a></li>
+              <li><a href="./building-n-testing.html#basic-testing">基本テスト</a></li>
+              <li><a href="./building-n-testing.html#testing-markup">マークアップテスト</a></li>
+            </ul>
+          </li>
+          <li><a class="releaseProcess" href="./release-process.html">Release process</a></li>
+          <li><a class="lineNumbers active" href="./line-numbers.html">Line numbers</a></li>
+          <li><a class="newLanguages" href="./new-languages.html">On requesting new languages</a></li>
+          <li><a class="other" href="./other.html">Other</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>Line numbers</h1>
+              <div id="update_date"><span>更新日: 2018.06.14
+</span>
+              </div>
+              <p>
+                highlight.jsが行番号を表示しないのは、
+                機能の見落としではなく、想定通りの処理です。
+                以下は、現在のプロジェクトメンテナーからのポリシーの説明です。
+              </p>
+              <blockquote class="comment">
+                <p>
+                  highlight.jsの開発当初からの設計原則の一つは"シンプルさ"でした。
+                  コードの単純さではなく(実際、かなり複雑です)、
+                  使い方と、HTML上でハイライトされたスニペットの見栄えです。
+                  多くのハイライターは、
+                  1つの語句ごとに色を分けたり、背景をストライプにしたり、
+                  コードブロックの周りに派手なボタンがあったり、
+                  そして、そう、行番号があったり、
+                  私はやり過ぎだと思います。
+                  コードの周りに派手なものがあるほど、
+                  ユーザーの気が逸れて理解しにくくなってしまいます。
+                </p>
+                <p>
+                  これは簡単に決断したわけではありません。
+                  この目新しい仕様は、highlight.jsをより良くするだけではなく、
+                  それを作ることによって、インターネット上のブログ記事を肥大化させ、
+                  悪化させるだけかもしれません。
+                  これが私が人々に"それだけの価値がある"ことを示す理由です。
+                </p>
+                <p>
+                  これまで行番号をサポートする唯一のユースケースは、
+                  コードブロック外の記述からコードを参照する場合です。
+                  私自身のブログでは、コード自体のコメントを使って
+                  大きなスニペットを小さなスニペットに分割し、
+                  それぞれを別々に記述することで、解決してきました。
+                  私がそれが良い解決法だと言っているわけではありません。
+                  しかし、行番号をどのように表示した方が良いかは分かりません。
+                  それらを判断する唯一の方法は、
+                  この件について、いくつかのユーザービリティを調査し、
+                  どちらが良いか比べるしかありません。
+                  誰かがやったところで気にしないでしょう。
+                </p>
+                <p>
+                  そしてメンテナンスがあります。
+                  これまでhighlight.jsのコアコードは1人の人間が管理してきました。-- 私ですが。
+                  hilight.jsに新しいコードを埋め込むということは、
+                  その瞬間、バグを修正し、改善しなければならず、
+                  残りのコードと共に動作させ、そのデザインを守らなければならないことを意味します。
+                  そして、それは私にとって"evil"であるとみなし、
+                  私自身が使うことは無い機能を作りたいとは思いません。
+                </p>
+              </blockquote><br>
+              <p>この見解・態度は<a href="https://groups.google.com/forum/#!forum/highlightjs" target="_blank" rel="noopener noreferrer">議論の対象</a>になります。
+                また、誰もコードをforkし、行番号の表示を実装することを止めません。
+              </p><br><br>
+              <div class="license">
+                <p>
+                  &copy; 2006
+                   Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for details.
+                </p>
+                <p>このコンテンツは<a href="https://highlightjs.readthedocs.io/en/latest/">highlightjsドキュメント</a>を翻訳/改変したものです。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="./css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/highlight.pack.js"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>

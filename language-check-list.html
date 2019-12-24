@@ -1,36 +1,236 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Language contributor checklist | highlight.js - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="Language contributor checklist | highlight.js - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/hljs/favicon.ico"><link rel="stylesheet" href="./css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">highlight.js - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="./index.html">Home</a></li><li><a class="getting-started" href="./getting-started.html">Getting Started</a></li><li><span onclick="toggleApi()">Library API</span><ul class="hidden" id="navi_api"><li><a href="./api/highlight.html">.highlight()</a></li><li><a href="./api/highlight-auto.html">.highlightAuto()</a></li><li><a href="./api/fix-markup.html">.fixMarkup()</a></li><li><a href="./api/highlight-block.html">.highlightBlock()</a></li><li><a href="./api/configure.html">.configure()</a></li><li><a href="./api/init-highlighting.html">.initHighlighting()</a></li><li><a href="./api/init-highlighting-onload.html">.initHighlightingOnLoad()</a></li><li><a href="./api/register-language.html">.registerLanguage()</a></li><li><a href="./api/list-languages.html">.listLanguages()</a></li><li><a href="./api/get-language.html">.getLanguage()</a></li></ul></li><li><a class="languageGuide" href="./language-guide.html">Language definition guide</a><ul class="hidden" id="navi_languageGuide"><li><a href="./language-guide.html#highlighting-overview">ハイライトの概要</a></li><li><a href="./language-guide.html#general-syntax">一般的な構文</a></li><li><a href="./language-guide.html#keywords">キーワード</a></li><li><a href="./language-guide.html#sub-modes">サブモード</a></li><li><a href="./language-guide.html#comments">コメント</a></li><li><a href="./language-guide.html#markup-generation">マークアップ</a></li><li><a href="./language-guide.html#mode-attributes">モード属性</a></li><li><a href="./language-guide.html#relevance">コードの関連性</a></li><li><a href="./language-guide.html#illegal-symbols">不正シンボル</a></li><li><a href="./language-guide.html#pre-defined-modes">定義済みのモードと正規表現</a></li></ul></li><li><a class="reference" href="./reference.html">Mode reference</a><ul class="hidden" id="navi_reference"><li><a href="./reference.html#types">各属性値の型</a></li><li><a href="./reference.html#attributes">属性</a><ul><li><a href="./reference.html#case_insensitive">case_insensitive</a></li><li><a href="./reference.html#aliases">aliases</a></li><li><a href="./reference.html#className">className</a></li><li><a href="./reference.html#begin">begin</a></li><li><a href="./reference.html#end">end</a></li><li><a href="./reference.html#beginKeywords">beginKeywords</a></li><li><a href="./reference.html#endsWithParent">endsWithParent</a></li><li><a href="./reference.html#endsParent">endsParent</a></li><li><a href="./reference.html#lexemes">lexemes</a></li><li><a href="./reference.html#keywords">keywords</a></li><li><a href="./reference.html#illegal">illegal</a></li><li><a href="./reference.html#exclude">excludeBegin, excludeEnd</a></li><li><a href="./reference.html#returnBegin">returnBegin</a></li><li><a href="./reference.html#returnEnd">returnEnd</a></li><li><a href="./reference.html#contains">contains</a></li><li><a href="./reference.html#starts">starts</a></li><li><a href="./reference.html#variants">variants</a></li><li><a href="./reference.html#subLanguage">subLanguage</a></li><li><a href="./reference.html#skip">skip</a></li></ul></li></ul></li><li><span onclick="cssClassRef()">CSS classes reference</span><ul class="hidden" id="navi_cssClassRef"><li><a href="./css-class-ref/stylable-class.html">指定可能なクラス</a></li><li><a href="./css-class-ref/language-name.html">言語名とエイリアス</a></li></ul></li><li><a class="styleGuide" href="./style-guide.html">Style guide</a><ul class="hidden" id="navi_styleGuide"><li><a href="./style-guide.html#key-principle">基本的な方針</a></li><li><a href="./style-guide.html#defining-a-theme">テーマの定義</a></li><li><a href="./style-guide.html#typography-n-layout">タイポグラフィとレイアウトの注意事項</a></li><li><a href="./style-guide.html#subst">.subst</a></li><li><a href="./style-guide.html#contributing">コントリビュート</a></li></ul></li><li><a class="languageCheckList active" href="./language-check-list.html">Language contributor checklist</a><ul id="navi_languageCheckList"><li><a href="./language-check-list.html#put-language-definition">1. 言語定義の.jsファイルを追加</a></li><li><a href="./language-check-list.html#provide-meta-data">2. メタデータの挿入</a></li><li><a href="./language-check-list.html#code-example">3. コード例の作成</a></li><li><a href="./language-check-list.html#write-class-reference">4. クラスリファレンス作成</a></li><li><a href="./language-check-list.html#add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</a></li><li><a href="./language-check-list.html#pull-request">6. プルリクエストを作成</a></li></ul></li><li><a class="buildAndTest" href="./building-n-testing.html">Building and testing</a><ul class="hidden" id="navi_buildAndTest"><li><a href="./building-n-testing.html#building">ビルド</a></li><li><a href="./building-n-testing.html#basic-testing">基本テスト</a></li><li><a href="./building-n-testing.html#testing-markup">マークアップテスト</a></li></ul></li><li><a class="releaseProcess" href="./release-process.html">Release process</a></li><li><a class="lineNumbers" href="./line-numbers.html">Line numbers</a></li><li><a class="newLanguages" href="./new-languages.html">On requesting new languages</a></li><li><a class="other" href="./other.html">Other</a></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>Language contributor checklist</h1><div id="update_date"><span>更新日: 2018.09.14
-</span></div><h2 id="put-language-definition">1. 言語定義の.jsファイルを追加</h2><p>ファイルには、
-ライブラリ(<code>hljs</code>)への参照を受け入れ、
-言語オブジェクトを返す関数を定義します。
-ライブラリパラメータは、共通のモードと、正規表現を使うのに便利です。
-この関数はすぐに呼び出すべきではありません。
-この関数はビルド中に処理され、ビルドターゲットによって詳細が異なります。</p><pre><code><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">hljs</span>) </span>{
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Language contributor checklist | highlight.js - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Language contributor checklist | highlight.js - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/hljs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="./js/toggleTheme.js" data-dir="hljs"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">highlight.js - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="./index.html">Home</a></li>
+          <li><a class="getting-started" href="./getting-started.html">Getting Started</a></li>
+          <li><span onclick="toggleApi()">Library API</span>
+            <ul class="hidden" id="navi_api">
+              <li><a href="./api/highlight.html">.highlight()</a></li>
+              <li><a href="./api/highlight-auto.html">.highlightAuto()</a></li>
+              <li><a href="./api/fix-markup.html">.fixMarkup()</a></li>
+              <li><a href="./api/highlight-block.html">.highlightBlock()</a></li>
+              <li><a href="./api/configure.html">.configure()</a></li>
+              <li><a href="./api/init-highlighting.html">.initHighlighting()</a></li>
+              <li><a href="./api/init-highlighting-onload.html">.initHighlightingOnLoad()</a></li>
+              <li><a href="./api/register-language.html">.registerLanguage()</a></li>
+              <li><a href="./api/list-languages.html">.listLanguages()</a></li>
+              <li><a href="./api/get-language.html">.getLanguage()</a></li>
+            </ul>
+          </li>
+          <li><a class="languageGuide" href="./language-guide.html">Language definition guide</a>
+            <ul class="hidden" id="navi_languageGuide">
+              <li><a href="./language-guide.html#highlighting-overview">ハイライトの概要</a></li>
+              <li><a href="./language-guide.html#general-syntax">一般的な構文</a></li>
+              <li><a href="./language-guide.html#keywords">キーワード</a></li>
+              <li><a href="./language-guide.html#sub-modes">サブモード</a></li>
+              <li><a href="./language-guide.html#comments">コメント</a></li>
+              <li><a href="./language-guide.html#markup-generation">マークアップ</a></li>
+              <li><a href="./language-guide.html#mode-attributes">モード属性</a></li>
+              <li><a href="./language-guide.html#relevance">コードの関連性</a></li>
+              <li><a href="./language-guide.html#illegal-symbols">不正シンボル</a></li>
+              <li><a href="./language-guide.html#pre-defined-modes">定義済みのモードと正規表現</a></li>
+            </ul>
+          </li>
+          <li><a class="reference" href="./reference.html">Mode reference</a>
+            <ul class="hidden" id="navi_reference">
+              <li><a href="./reference.html#types">各属性値の型</a>
+              </li>
+              <li><a href="./reference.html#attributes">属性</a>
+                <ul>
+                  <li><a href="./reference.html#case_insensitive">case_insensitive</a></li>
+                  <li><a href="./reference.html#aliases">aliases</a></li>
+                  <li><a href="./reference.html#className">className</a></li>
+                  <li><a href="./reference.html#begin">begin</a></li>
+                  <li><a href="./reference.html#end">end</a></li>
+                  <li><a href="./reference.html#beginKeywords">beginKeywords</a></li>
+                  <li><a href="./reference.html#endsWithParent">endsWithParent</a></li>
+                  <li><a href="./reference.html#endsParent">endsParent</a></li>
+                  <li><a href="./reference.html#lexemes">lexemes</a></li>
+                  <li><a href="./reference.html#keywords">keywords</a></li>
+                  <li><a href="./reference.html#illegal">illegal</a></li>
+                  <li><a href="./reference.html#exclude">excludeBegin, excludeEnd</a></li>
+                  <li><a href="./reference.html#returnBegin">returnBegin</a></li>
+                  <li><a href="./reference.html#returnEnd">returnEnd</a></li>
+                  <li><a href="./reference.html#contains">contains</a></li>
+                  <li><a href="./reference.html#starts">starts</a></li>
+                  <li><a href="./reference.html#variants">variants</a></li>
+                  <li><a href="./reference.html#subLanguage">subLanguage</a></li>
+                  <li><a href="./reference.html#skip">skip</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="cssClassRef()">CSS classes reference</span>
+            <ul class="hidden" id="navi_cssClassRef">
+              <li><a href="./css-class-ref/stylable-class.html">指定可能なクラス</a></li>
+              <li><a href="./css-class-ref/language-name.html">言語名とエイリアス</a></li>
+            </ul>
+          </li>
+          <li><a class="styleGuide" href="./style-guide.html">Style guide</a>
+            <ul class="hidden" id="navi_styleGuide">
+              <li><a href="./style-guide.html#key-principle">基本的な方針</a></li>
+              <li><a href="./style-guide.html#defining-a-theme">テーマの定義</a></li>
+              <li><a href="./style-guide.html#typography-n-layout">タイポグラフィとレイアウトの注意事項</a></li>
+              <li><a href="./style-guide.html#subst">.subst</a></li>
+              <li><a href="./style-guide.html#contributing">コントリビュート</a></li>
+            </ul>
+          </li>
+          <li><a class="languageCheckList active" href="./language-check-list.html">Language contributor checklist</a>
+            <ul id="navi_languageCheckList">
+              <li><a href="./language-check-list.html#put-language-definition">1. 言語定義の.jsファイルを追加</a></li>
+              <li><a href="./language-check-list.html#provide-meta-data">2. メタデータの挿入</a></li>
+              <li><a href="./language-check-list.html#code-example">3. コード例の作成</a></li>
+              <li><a href="./language-check-list.html#write-class-reference">4. クラスリファレンス作成</a></li>
+              <li><a href="./language-check-list.html#add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</a></li>
+              <li><a href="./language-check-list.html#pull-request">6. プルリクエストを作成</a></li>
+            </ul>
+          </li>
+          <li><a class="buildAndTest" href="./building-n-testing.html">Building and testing</a>
+            <ul class="hidden" id="navi_buildAndTest">
+              <li><a href="./building-n-testing.html#building">ビルド</a></li>
+              <li><a href="./building-n-testing.html#basic-testing">基本テスト</a></li>
+              <li><a href="./building-n-testing.html#testing-markup">マークアップテスト</a></li>
+            </ul>
+          </li>
+          <li><a class="releaseProcess" href="./release-process.html">Release process</a></li>
+          <li><a class="lineNumbers" href="./line-numbers.html">Line numbers</a></li>
+          <li><a class="newLanguages" href="./new-languages.html">On requesting new languages</a></li>
+          <li><a class="other" href="./other.html">Other</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>Language contributor checklist</h1>
+              <div id="update_date"><span>更新日: 2018.09.14
+</span>
+              </div>
+              <h2 id="put-language-definition">1. 言語定義の.jsファイルを追加</h2>
+              <p>
+                ファイルには、
+                ライブラリ(<code>hljs</code>)への参照を受け入れ、
+                言語オブジェクトを返す関数を定義します。
+                ライブラリパラメータは、共通のモードと、正規表現を使うのに便利です。
+                この関数はすぐに呼び出すべきではありません。
+                この関数はビルド中に処理され、ビルドターゲットによって詳細が異なります。
+              </p>
+              <pre><code><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">hljs</span>) </span>{
   <span class="hljs-keyword">return</span> {
     <span class="hljs-attr">keywords</span>: <span class="hljs-string">'foo bar'</span>,
     <span class="hljs-attr">contains</span>: [ ..., hljs.NUMBER_MODE, ... ]
   }
-}</code></pre><p>ファイル名は、言語の識別子として使われるので、
-HTMLとCSSのクラス名として使うことができます。</p><br><h2 id="provide-meta-data">2. メタデータの挿入</h2><p>ファイルの先頭には、ビルドシステムに処理されたメタデータを持つ、
-特殊な形式のコメントがあります。
-メタデータは、各行がkey-valueの形式で構成されています。</p><pre><code><span class="hljs-comment">/*
+}</code></pre>
+              <p>
+                ファイル名は、言語の識別子として使われるので、
+                HTMLとCSSのクラス名として使うことができます。
+              </p><br>
+              <h2 id="provide-meta-data">2. メタデータの挿入</h2>
+              <p>
+                ファイルの先頭には、ビルドシステムに処理されたメタデータを持つ、
+                特殊な形式のコメントがあります。
+                メタデータは、各行がkey-valueの形式で構成されています。
+              </p>
+              <pre><code><span class="hljs-comment">/*
 Language: Superlanguage
 Requires: java.js, sql.js
 Author: John Smith &lt;email@domain.com&gt;
 Contributors: Mike Johnson &lt;...@...&gt;, Matt Wilson &lt;...@...&gt;
 Description: Some cool language definition
-*/</span></code></pre><br><dl><dt><code>Language</code></dt><dd>唯一必要なヘッダーで、読みやすい言語名が記載されます。</dd><dt><code>Requires</code></dt><dd>この言語定義が動作するのに必要な、他の言語のファイルリスト。
-これにより、他の言語の定義を拡張する言語を定義することができます。
-必要なファイルは特殊な方法で処理するわけではありません。
-ビルドシステムは、これらのファイルを、
-最終的なパッケージの<code>LANGUAGES</code>オブジェクトに確実に追加します。</dd></dl><p>その他のヘッダーの意味は、keyの通りです。</p><br><h2 id="code-example">3. コード例の作成</h2><p>コード例は、<a href="https://highlightjs.org/" target="_blank" rel="noopener noreferrer">https://highlightjs.org/</a>のトップページと、デモページで使用されます。
-コード例は、<code>test/detect/<language>/default.txt</code>として作成してください。</p><p><code>test/detect/</code>にある、他の言語からインスピレーションを得てください。
-詳細は<a href="./building-n-testing.html">ビルドとテスト</a>を参照してください。</p><br><h2 id="write-class-reference">4. クラスリファレンスを書く</h2><p>クラスリファレンスは<a href="./css-class-ref/stylable-class.html">CSSクラスリファレンス</a>にあります。
-言語定義で使用中の意味を持った全てのモードを記述してください。</p><br><h2 id="add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</h2><p>もし新規のコントリビューターなら、開発者リストに名前を追記してください。
-英語版とロシア語版を自由に使って下さい。
-併せて、CHANGES.mdも更新すると良いでしょう。</p><br><h2 id="pull-request">6. プルリクエストを作成</h2><p>コントリビュートをGitHubでプルリクエストしてください。</p><br><br><div class="license"><p>&copy; 2006
- Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for details.</p><p>このコンテンツは<a href="https://highlightjs.readthedocs.io/en/latest/">highlightjsドキュメント</a>を翻訳/改変したものです。</p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="./css/lazy.css" rel="stylesheet"></noscript><script src="./js/main.js" defer></script><script src="./js/highlight.pack.js"></script><div id="src" hidden></div></body></html>
+*/</span></code></pre><br>
+              <dl>
+                <dt><code>Language</code></dt>
+                <dd>唯一必要なヘッダーで、読みやすい言語名が記載されます。</dd>
+                <dt><code>Requires</code></dt>
+                <dd>
+                  この言語定義が動作するのに必要な、他の言語のファイルリスト。
+                  これにより、他の言語の定義を拡張する言語を定義することができます。
+                  必要なファイルは特殊な方法で処理するわけではありません。
+                  ビルドシステムは、これらのファイルを、
+                  最終的なパッケージの<code>LANGUAGES</code>オブジェクトに確実に追加します。
+                </dd>
+              </dl>
+              <p>その他のヘッダーの意味は、keyの通りです。</p><br>
+              <h2 id="code-example">3. コード例の作成</h2>
+              <p>コード例は、<a href="https://highlightjs.org/" target="_blank" rel="noopener noreferrer">https://highlightjs.org/</a>のトップページと、デモページで使用されます。
+                コード例は、<code>test/detect/<language>/default.txt</code>として作成してください。
+              </p>
+              <p><code>test/detect/</code>にある、他の言語からインスピレーションを得てください。
+                詳細は<a href="./building-n-testing.html">ビルドとテスト</a>を参照してください。
+              </p><br>
+              <h2 id="write-class-reference">4. クラスリファレンスを書く</h2>
+              <p>クラスリファレンスは<a href="./css-class-ref/stylable-class.html">CSSクラスリファレンス</a>にあります。
+                言語定義で使用中の意味を持った全てのモードを記述してください。
+              </p><br>
+              <h2 id="add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</h2>
+              <p>
+                もし新規のコントリビューターなら、開発者リストに名前を追記してください。
+                英語版とロシア語版を自由に使って下さい。
+                併せて、CHANGES.mdも更新すると良いでしょう。
+              </p><br>
+              <h2 id="pull-request">6. プルリクエストを作成</h2>
+              <p>コントリビュートをGitHubでプルリクエストしてください。</p><br><br>
+              <div class="license">
+                <p>
+                  &copy; 2006
+                   Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for details.
+                </p>
+                <p>このコンテンツは<a href="https://highlightjs.readthedocs.io/en/latest/">highlightjsドキュメント</a>を翻訳/改変したものです。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="./css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/highlight.pack.js"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>

@@ -1,21 +1,187 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Language definition guide | highlight.js - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="Language definition guide | highlight.js - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/hljs/favicon.ico"><link rel="stylesheet" href="./css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">highlight.js - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="./index.html">Home</a></li><li><a class="getting-started" href="./getting-started.html">Getting Started</a></li><li><span onclick="toggleApi()">Library API</span><ul class="hidden" id="navi_api"><li><a href="./api/highlight.html">.highlight()</a></li><li><a href="./api/highlight-auto.html">.highlightAuto()</a></li><li><a href="./api/fix-markup.html">.fixMarkup()</a></li><li><a href="./api/highlight-block.html">.highlightBlock()</a></li><li><a href="./api/configure.html">.configure()</a></li><li><a href="./api/init-highlighting.html">.initHighlighting()</a></li><li><a href="./api/init-highlighting-onload.html">.initHighlightingOnLoad()</a></li><li><a href="./api/register-language.html">.registerLanguage()</a></li><li><a href="./api/list-languages.html">.listLanguages()</a></li><li><a href="./api/get-language.html">.getLanguage()</a></li></ul></li><li><a class="languageGuide active" href="./language-guide.html">Language definition guide</a><ul id="navi_languageGuide"><li><a href="./language-guide.html#highlighting-overview">ハイライトの概要</a></li><li><a href="./language-guide.html#general-syntax">一般的な構文</a></li><li><a href="./language-guide.html#keywords">キーワード</a></li><li><a href="./language-guide.html#sub-modes">サブモード</a></li><li><a href="./language-guide.html#comments">コメント</a></li><li><a href="./language-guide.html#markup-generation">マークアップ</a></li><li><a href="./language-guide.html#mode-attributes">モード属性</a></li><li><a href="./language-guide.html#relevance">コードの関連性</a></li><li><a href="./language-guide.html#illegal-symbols">不正シンボル</a></li><li><a href="./language-guide.html#pre-defined-modes">定義済みのモードと正規表現</a></li></ul></li><li><a class="reference" href="./reference.html">Mode reference</a><ul class="hidden" id="navi_reference"><li><a href="./reference.html#types">各属性値の型</a></li><li><a href="./reference.html#attributes">属性</a><ul><li><a href="./reference.html#case_insensitive">case_insensitive</a></li><li><a href="./reference.html#aliases">aliases</a></li><li><a href="./reference.html#className">className</a></li><li><a href="./reference.html#begin">begin</a></li><li><a href="./reference.html#end">end</a></li><li><a href="./reference.html#beginKeywords">beginKeywords</a></li><li><a href="./reference.html#endsWithParent">endsWithParent</a></li><li><a href="./reference.html#endsParent">endsParent</a></li><li><a href="./reference.html#lexemes">lexemes</a></li><li><a href="./reference.html#keywords">keywords</a></li><li><a href="./reference.html#illegal">illegal</a></li><li><a href="./reference.html#exclude">excludeBegin, excludeEnd</a></li><li><a href="./reference.html#returnBegin">returnBegin</a></li><li><a href="./reference.html#returnEnd">returnEnd</a></li><li><a href="./reference.html#contains">contains</a></li><li><a href="./reference.html#starts">starts</a></li><li><a href="./reference.html#variants">variants</a></li><li><a href="./reference.html#subLanguage">subLanguage</a></li><li><a href="./reference.html#skip">skip</a></li></ul></li></ul></li><li><span onclick="cssClassRef()">CSS classes reference</span><ul class="hidden" id="navi_cssClassRef"><li><a href="./css-class-ref/stylable-class.html">指定可能なクラス</a></li><li><a href="./css-class-ref/language-name.html">言語名とエイリアス</a></li></ul></li><li><a class="styleGuide" href="./style-guide.html">Style guide</a><ul class="hidden" id="navi_styleGuide"><li><a href="./style-guide.html#key-principle">基本的な方針</a></li><li><a href="./style-guide.html#defining-a-theme">テーマの定義</a></li><li><a href="./style-guide.html#typography-n-layout">タイポグラフィとレイアウトの注意事項</a></li><li><a href="./style-guide.html#subst">.subst</a></li><li><a href="./style-guide.html#contributing">コントリビュート</a></li></ul></li><li><a class="languageCheckList" href="./language-check-list.html">Language contributor checklist</a><ul class="hidden" id="navi_languageCheckList"><li><a href="./language-check-list.html#put-language-definition">1. 言語定義の.jsファイルを追加</a></li><li><a href="./language-check-list.html#provide-meta-data">2. メタデータの挿入</a></li><li><a href="./language-check-list.html#code-example">3. コード例の作成</a></li><li><a href="./language-check-list.html#write-class-reference">4. クラスリファレンス作成</a></li><li><a href="./language-check-list.html#add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</a></li><li><a href="./language-check-list.html#pull-request">6. プルリクエストを作成</a></li></ul></li><li><a class="buildAndTest" href="./building-n-testing.html">Building and testing</a><ul class="hidden" id="navi_buildAndTest"><li><a href="./building-n-testing.html#building">ビルド</a></li><li><a href="./building-n-testing.html#basic-testing">基本テスト</a></li><li><a href="./building-n-testing.html#testing-markup">マークアップテスト</a></li></ul></li><li><a class="releaseProcess" href="./release-process.html">Release process</a></li><li><a class="lineNumbers" href="./line-numbers.html">Line numbers</a></li><li><a class="newLanguages" href="./new-languages.html">On requesting new languages</a></li><li><a class="other" href="./other.html">Other</a></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>Language definition guide</h1><div id="update_date"><span>更新日: 2018.09.14
-</span></div><h2 id="highlighting-overview">ハイライトの概要</h2><p>プログラムコードは、構文解析ルールが異なるパーツで構成されています。
-<code>for</code>や<code>if</code>のようなキーワードは、文字列の中で意味を持たないので、
-文字列に<code>\"</code>のようなバックスラッシュでエスケープされた文字列が含まれることがあります。
-また、コメントには通常、コメントの最後の部分を除いて、重要な要素はありません。</p><p>highlight.jsではこのようなパーツを"モード"と呼んでいます。</p><p>各モードは以下の条件で成り立っています。</p><ul><li>開始条件</li><li>終了条件</li><li>含まれているサブモードのリスト</li><li>字句解析のルールと、キーワード</li><li>言語の中に別の言語が含まれるような変わったもの</li></ul><p>パーサの仕事は、モードとキーワードを探すことです。
-モードやキーワードを見つけると、<code>&#x3C;span class=&#x22;...&#x22;&#x3E;...&#x3C;/span&#x3E;</code>でマークアップします。
-そして、モード名(<code>string</code>、<code>comment</code>、<code>number</code>)か、
-キーワードのグループ名(<code>keyword</code>、<code>literal</code>、<code>built-in</code>)をクラス名として追加します。</p><br><h2 id="general-syntax">一般的な構文</h2><p>言語定義は、言語の"デフォルト「解析」モード"を記述したJavaScriptのオブジェクトです。
-このデフォルトモードは、他のサブモードを含んだサブモードを持っており、
-効果的に言語定義をモードのツリーにします。</p><p>以下に例を示します。</p><pre><code>{
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Language definition guide | highlight.js - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Language definition guide | highlight.js - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/hljs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="./js/toggleTheme.js" data-dir="hljs"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">highlight.js - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="./index.html">Home</a></li>
+          <li><a class="getting-started" href="./getting-started.html">Getting Started</a></li>
+          <li><span onclick="toggleApi()">Library API</span>
+            <ul class="hidden" id="navi_api">
+              <li><a href="./api/highlight.html">.highlight()</a></li>
+              <li><a href="./api/highlight-auto.html">.highlightAuto()</a></li>
+              <li><a href="./api/fix-markup.html">.fixMarkup()</a></li>
+              <li><a href="./api/highlight-block.html">.highlightBlock()</a></li>
+              <li><a href="./api/configure.html">.configure()</a></li>
+              <li><a href="./api/init-highlighting.html">.initHighlighting()</a></li>
+              <li><a href="./api/init-highlighting-onload.html">.initHighlightingOnLoad()</a></li>
+              <li><a href="./api/register-language.html">.registerLanguage()</a></li>
+              <li><a href="./api/list-languages.html">.listLanguages()</a></li>
+              <li><a href="./api/get-language.html">.getLanguage()</a></li>
+            </ul>
+          </li>
+          <li><a class="languageGuide active" href="./language-guide.html">Language definition guide</a>
+            <ul id="navi_languageGuide">
+              <li><a href="./language-guide.html#highlighting-overview">ハイライトの概要</a></li>
+              <li><a href="./language-guide.html#general-syntax">一般的な構文</a></li>
+              <li><a href="./language-guide.html#keywords">キーワード</a></li>
+              <li><a href="./language-guide.html#sub-modes">サブモード</a></li>
+              <li><a href="./language-guide.html#comments">コメント</a></li>
+              <li><a href="./language-guide.html#markup-generation">マークアップ</a></li>
+              <li><a href="./language-guide.html#mode-attributes">モード属性</a></li>
+              <li><a href="./language-guide.html#relevance">コードの関連性</a></li>
+              <li><a href="./language-guide.html#illegal-symbols">不正シンボル</a></li>
+              <li><a href="./language-guide.html#pre-defined-modes">定義済みのモードと正規表現</a></li>
+            </ul>
+          </li>
+          <li><a class="reference" href="./reference.html">Mode reference</a>
+            <ul class="hidden" id="navi_reference">
+              <li><a href="./reference.html#types">各属性値の型</a>
+              </li>
+              <li><a href="./reference.html#attributes">属性</a>
+                <ul>
+                  <li><a href="./reference.html#case_insensitive">case_insensitive</a></li>
+                  <li><a href="./reference.html#aliases">aliases</a></li>
+                  <li><a href="./reference.html#className">className</a></li>
+                  <li><a href="./reference.html#begin">begin</a></li>
+                  <li><a href="./reference.html#end">end</a></li>
+                  <li><a href="./reference.html#beginKeywords">beginKeywords</a></li>
+                  <li><a href="./reference.html#endsWithParent">endsWithParent</a></li>
+                  <li><a href="./reference.html#endsParent">endsParent</a></li>
+                  <li><a href="./reference.html#lexemes">lexemes</a></li>
+                  <li><a href="./reference.html#keywords">keywords</a></li>
+                  <li><a href="./reference.html#illegal">illegal</a></li>
+                  <li><a href="./reference.html#exclude">excludeBegin, excludeEnd</a></li>
+                  <li><a href="./reference.html#returnBegin">returnBegin</a></li>
+                  <li><a href="./reference.html#returnEnd">returnEnd</a></li>
+                  <li><a href="./reference.html#contains">contains</a></li>
+                  <li><a href="./reference.html#starts">starts</a></li>
+                  <li><a href="./reference.html#variants">variants</a></li>
+                  <li><a href="./reference.html#subLanguage">subLanguage</a></li>
+                  <li><a href="./reference.html#skip">skip</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="cssClassRef()">CSS classes reference</span>
+            <ul class="hidden" id="navi_cssClassRef">
+              <li><a href="./css-class-ref/stylable-class.html">指定可能なクラス</a></li>
+              <li><a href="./css-class-ref/language-name.html">言語名とエイリアス</a></li>
+            </ul>
+          </li>
+          <li><a class="styleGuide" href="./style-guide.html">Style guide</a>
+            <ul class="hidden" id="navi_styleGuide">
+              <li><a href="./style-guide.html#key-principle">基本的な方針</a></li>
+              <li><a href="./style-guide.html#defining-a-theme">テーマの定義</a></li>
+              <li><a href="./style-guide.html#typography-n-layout">タイポグラフィとレイアウトの注意事項</a></li>
+              <li><a href="./style-guide.html#subst">.subst</a></li>
+              <li><a href="./style-guide.html#contributing">コントリビュート</a></li>
+            </ul>
+          </li>
+          <li><a class="languageCheckList" href="./language-check-list.html">Language contributor checklist</a>
+            <ul class="hidden" id="navi_languageCheckList">
+              <li><a href="./language-check-list.html#put-language-definition">1. 言語定義の.jsファイルを追加</a></li>
+              <li><a href="./language-check-list.html#provide-meta-data">2. メタデータの挿入</a></li>
+              <li><a href="./language-check-list.html#code-example">3. コード例の作成</a></li>
+              <li><a href="./language-check-list.html#write-class-reference">4. クラスリファレンス作成</a></li>
+              <li><a href="./language-check-list.html#add-yourself">5. AUTHORS.*.txtとCHANGES.mdの編集</a></li>
+              <li><a href="./language-check-list.html#pull-request">6. プルリクエストを作成</a></li>
+            </ul>
+          </li>
+          <li><a class="buildAndTest" href="./building-n-testing.html">Building and testing</a>
+            <ul class="hidden" id="navi_buildAndTest">
+              <li><a href="./building-n-testing.html#building">ビルド</a></li>
+              <li><a href="./building-n-testing.html#basic-testing">基本テスト</a></li>
+              <li><a href="./building-n-testing.html#testing-markup">マークアップテスト</a></li>
+            </ul>
+          </li>
+          <li><a class="releaseProcess" href="./release-process.html">Release process</a></li>
+          <li><a class="lineNumbers" href="./line-numbers.html">Line numbers</a></li>
+          <li><a class="newLanguages" href="./new-languages.html">On requesting new languages</a></li>
+          <li><a class="other" href="./other.html">Other</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>Language definition guide</h1>
+              <div id="update_date"><span>更新日: 2018.09.14
+</span>
+              </div>
+              <h2 id="highlighting-overview">ハイライトの概要</h2>
+              <p>
+                プログラムコードは、構文解析ルールが異なるパーツで構成されています。
+                <code>for</code>や<code>if</code>のようなキーワードは、文字列の中で意味を持たないので、
+                文字列に<code>\"</code>のようなバックスラッシュでエスケープされた文字列が含まれることがあります。
+                また、コメントには通常、コメントの最後の部分を除いて、重要な要素はありません。
+              </p>
+              <p>highlight.jsではこのようなパーツを"モード"と呼んでいます。</p>
+              <p>各モードは以下の条件で成り立っています。</p>
+              <ul>
+                <li>開始条件</li>
+                <li>終了条件</li>
+                <li>含まれているサブモードのリスト</li>
+                <li>字句解析のルールと、キーワード</li>
+                <li>言語の中に別の言語が含まれるような変わったもの</li>
+              </ul>
+              <p>
+                パーサの仕事は、モードとキーワードを探すことです。
+                モードやキーワードを見つけると、<code>&#x3C;span class=&#x22;...&#x22;&#x3E;...&#x3C;/span&#x3E;</code>でマークアップします。
+                そして、モード名(<code>string</code>、<code>comment</code>、<code>number</code>)か、
+                キーワードのグループ名(<code>keyword</code>、<code>literal</code>、<code>built-in</code>)をクラス名として追加します。
+              </p><br>
+              <h2 id="general-syntax">一般的な構文</h2>
+              <p>
+                言語定義は、言語の"デフォルト「解析」モード"を記述したJavaScriptのオブジェクトです。
+                このデフォルトモードは、他のサブモードを含んだサブモードを持っており、
+                効果的に言語定義をモードのツリーにします。
+              </p>
+              <p>以下に例を示します。</p>
+              <pre><code>{
   <span class="hljs-attr">case_insensitive</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// 大文字・小文字を区別しない言語です。</span>
-  keywords: <span class="hljs-string">'for if while'</span>,   <span class="hljs-comment">// キーワードを定義します。</span>
-  contains: [
+  <span class="hljs-attr">keywords</span>: <span class="hljs-string">'for if while'</span>,   <span class="hljs-comment">// キーワードを定義します。</span>
+  <span class="hljs-attr">contains</span>: [
     {
       <span class="hljs-attr">className</span>: <span class="hljs-string">'string'</span>,
       <span class="hljs-attr">begin</span>: <span class="hljs-string">'"'</span>, <span class="hljs-attr">end</span>: <span class="hljs-string">'"'</span>  <span class="hljs-comment">// "(ダブルクオーテーション)で囲まれた文字をstring(文字列)とします。</span>
@@ -32,50 +198,84 @@ ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"
       }
     )
   ]
-}</code></pre><br><p>通常、デフォルトモードはコードの大半を占め、言語のキーワードを全て記述します。
-XMLについては例外で、デフォルトモードにキーワードを含まず、
-ユーザーテキストのみで構成されます。
-そして、パースはタグの中で発生します。</p><br><h2 id="keywords">キーワード</h2><p>単純な場合、言語のキーワードはスペースで区切られた文字列で定義します。</p><pre><code>{
+}</code></pre><br>
+              <p>
+                通常、デフォルトモードはコードの大半を占め、言語のキーワードを全て記述します。
+                XMLについては例外で、デフォルトモードにキーワードを含まず、
+                ユーザーテキストのみで構成されます。
+                そして、パースはタグの中で発生します。
+              </p><br>
+              <h2 id="keywords">キーワード</h2>
+              <p>単純な場合、言語のキーワードはスペースで区切られた文字列で定義します。</p>
+              <pre><code>{
   <span class="hljs-attr">keywords</span>: <span class="hljs-string">'else for if while'</span>
-}</code></pre><p>いくつかの言語には別の種類の「キーワード」があります。
-例えば、あらゆる種類の"リテラル"、"ビルトイン"、"シンボル"等です。
-言語使用によっては、キーワードとは呼ばないかもしれませんが、
-シンタックスハイライトの観点からすれば、とても近いものです。
-そのようなキーワードをグループを定義するために、
-<code>keywords</code>属性に、それぞれのプロパティの独自のキーワードグループを定義します。</p><pre><code>{
+}</code></pre>
+              <p>
+                いくつかの言語には別の種類の「キーワード」があります。
+                例えば、あらゆる種類の"リテラル"、"ビルトイン"、"シンボル"等です。
+                言語使用によっては、キーワードとは呼ばないかもしれませんが、
+                シンタックスハイライトの観点からすれば、とても近いものです。
+                そのようなキーワードをグループを定義するために、
+                <code>keywords</code>属性に、それぞれのプロパティの独自のキーワードグループを定義します。
+              </p>
+              <pre><code>{
   <span class="hljs-attr">keywords</span>: {
     <span class="hljs-attr">keyword</span>: <span class="hljs-string">'else for if while'</span>,
     <span class="hljs-attr">literal</span>: <span class="hljs-string">'false true null'</span>
   }
-}</code></pre><p>グループ名は、マークアップ時に使用するクラス名になるため、
-キーワードグループごとに別のスタイルを適用することができます。</p><p>highlight.jsは、キーワードを検出すると、処理されたコードを別々の「単語」に分解します。
-この処理をlexing(レクシング=字句解析)と言います。
-ここでの「単語」は、正規表現の<code>[a-zA-Z][a-zA-Z0-9_]*</code>で定義された文字列で、ほとんどの言語のキーワードに対応しています。
-別の字句解析ルールは、<code>lexemes</code>属性で定義します。</p><pre><code>{
+}</code></pre>
+              <p>
+                グループ名は、マークアップ時に使用するクラス名になるため、
+                キーワードグループごとに別のスタイルを適用することができます。
+              </p>
+              <p>
+                highlight.jsは、キーワードを検出すると、処理されたコードを別々の「単語」に分解します。
+                この処理をlexing(レクシング=字句解析)と言います。
+                ここでの「単語」は、正規表現の<code>[a-zA-Z][a-zA-Z0-9_]*</code>で定義された文字列で、ほとんどの言語のキーワードに対応しています。
+                別の字句解析ルールは、<code>lexemes</code>属性で定義します。
+              </p>
+              <pre><code>{
   lexemes <span class="hljs-string">'-[a-z]+'</span>,
   <span class="hljs-attr">keywords</span>: <span class="hljs-string">'-import -export'</span>
-}</code></pre><br><h2 id="sub-modes">サブモード</h2><p>サブモードは<code>contains</code>属性の中にリスト化して定義します。</p><pre><code>{
+}</code></pre><br>
+              <h2 id="sub-modes">サブモード</h2>
+              <p>サブモードは<code>contains</code>属性の中にリスト化して定義します。</p>
+              <pre><code>{
   <span class="hljs-attr">keywords</span>: <span class="hljs-string">'...'</span>,
   <span class="hljs-attr">contains</span>: [
     hljs.QUOTE_STRING_MODE,
     hljs.C_LINE_COMMENT,
     { ... custom mode definition ... }
   ]
-}</code></pre><br><p>モードは、特殊なキーワードの<code>self</code>を使って、
-<code>contains</code>配列内から自身を参照することができます。
-これはネストしたモードの定義によく使われます。</p><pre><code>{
+}</code></pre><br>
+              <p>モードは、特殊なキーワードの<code>self</code>を使って、
+                <code>contains</code>配列内から自身を参照することができます。
+                これはネストしたモードの定義によく使われます。
+              </p>
+              <pre><code>{
   <span class="hljs-attr">className</span>: <span class="hljs-string">'object'</span>,
   <span class="hljs-attr">begin</span>: <span class="hljs-string">'{'</span>, <span class="hljs-attr">end</span>: <span class="hljs-string">'}'</span>,
   <span class="hljs-attr">contains</span>: [hljs.QUOTE_STRING_MODE, <span class="hljs-string">'self'</span>]
-}</code></pre><br><h2 id="comments">コメント</h2><p>カスタムコメントを定義する場合、モードを直接記述するのではなく、
-ビルトイン関数の<code>hljs.COMMENT</code>を使うことをお勧めします。
-これは、言語検出を改善し、他にも良いことをしてくれるデフォルトのサブモードが用意されているためです。</p><p>関数のパラメータは以下のとおりです。</p><pre><code>hljs.COMMENT(
+}</code></pre><br>
+              <h2 id="comments">コメント</h2>
+              <p>
+                カスタムコメントを定義する場合、モードを直接記述するのではなく、
+                ビルトイン関数の<code>hljs.COMMENT</code>を使うことをお勧めします。
+                これは、言語検出を改善し、他にも良いことをしてくれるデフォルトのサブモードが用意されているためです。
+              </p>
+              <p>関数のパラメータは以下のとおりです。</p>
+              <pre><code>hljs.COMMENT(
   begin,      <span class="hljs-comment">// コメント開始の正規表現</span>
   end,        <span class="hljs-comment">// コメント終了の正規表現</span>
   extra       <span class="hljs-comment">// デフォルト値を上書きします。オプションです。</span>
               <span class="hljs-comment">// (例： {relevance: 0})</span>
-)</code></pre><br><h2 id="markup-generation">マークアップ</h2><p>モードは通常、ハイライト済みのマークアップを生成します。
-(<code>className</code>属性で定義されたクラスを持った<code>span</code>要素)</p><pre><code>{
+)</code></pre><br>
+              <h2 id="markup-generation">マークアップ</h2>
+              <p>
+                モードは通常、ハイライト済みのマークアップを生成します。
+                (<code>className</code>属性で定義されたクラスを持った<code>span</code>要素)
+              </p>
+              <pre><code>{
   <span class="hljs-attr">contains</span>: [
     {
       <span class="hljs-attr">className</span>: <span class="hljs-string">'string'</span>,
@@ -86,53 +286,112 @@ XMLについては例外で、デフォルトモードにキーワードを含�
       <span class="hljs-comment">// ...</span>
     }
   ]
-}</code></pre><br><p><code>className</code>は一意である必要なく、
-一般的には、同名の定義が複数あることが多いでしょう。
-例えば、多くの言語には、文字列、コメント等、様々な構文があります。</p><p>モードは構文解析ルールをサポートするために定義し、
-マークアップには不要な場合があります。
-古典的な例として、
-エスケープシーケンスを使うことで、終了引用符を文字列内に含めることができます。</p><pre><code>{
+}</code></pre><br>
+              <p><code>className</code>は一意である必要なく、
+                一般的には、同名の定義が複数あることが多いでしょう。
+                例えば、多くの言語には、文字列、コメント等、様々な構文があります。
+              </p>
+              <p>
+                モードは構文解析ルールをサポートするために定義し、
+                マークアップには不要な場合があります。
+                古典的な例として、
+                エスケープシーケンスを使うことで、終了引用符を文字列内に含めることができます。
+              </p>
+              <pre><code>{
   <span class="hljs-attr">className</span>: <span class="hljs-string">'string'</span>,
   <span class="hljs-attr">begin</span>: <span class="hljs-string">'"'</span>, <span class="hljs-attr">end</span>: <span class="hljs-string">'"'</span>,
   <span class="hljs-attr">contains</span>: [{<span class="hljs-attr">begin</span>: <span class="hljs-string">'\\\\.'</span>}],
-}</code></pre><p>そのようなモードの場合、不要なマークアップを生成しないよう、
-<code>className</code>属性を省略する必要があります。</p><br><h2 id="mode-attributes">モード属性</h2><p>その他の便利な属性は、<a href="./reference.html">モードリファレンス</a>で定義されています。</p><br><h2 id="relevance">コードの関連性</h2><p>highlight.jsは、コードから言語を自動で検出しようとします。
-ヒューリスティックは実に単純です。
-該当した言語定義を全てハイライトしようとし、
-最も適切なモードやキーワードが適用されます。
-言語定義の仕事は、モードの相対的な関連性(or 無関連性)について、
-ヒューリスティックを手助けすることです。</p><p>よく説明で使われるのは次の例です。
-Pythonには、<code>r"..."</code>や、<code>u"..."</code>のように、
-引用符の前にプレフィックスがある特殊な文字列があります。
-コードにこのような文字列がある場合、それがPythonである可能性が高いと考えられます。
-そのため、上記の文字列モードには、高い関連性があると言えます。</p><pre><code>{
+}</code></pre>
+              <p>
+                そのようなモードの場合、不要なマークアップを生成しないよう、
+                <code>className</code>属性を省略する必要があります。
+              </p><br>
+              <h2 id="mode-attributes">モード属性</h2>
+              <p>その他の便利な属性は、<a href="./reference.html">モードリファレンス</a>で定義されています。</p><br>
+              <h2 id="relevance">コードの関連性</h2>
+              <p>
+                highlight.jsは、コードから言語を自動で検出しようとします。
+                ヒューリスティックは実に単純です。
+                該当した言語定義を全てハイライトしようとし、
+                最も適切なモードやキーワードが適用されます。
+                言語定義の仕事は、モードの相対的な関連性(or 無関連性)について、
+                ヒューリスティックを手助けすることです。
+              </p>
+              <p>
+                よく説明で使われるのは次の例です。
+                Pythonには、<code>r"..."</code>や、<code>u"..."</code>のように、
+                引用符の前にプレフィックスがある特殊な文字列があります。
+                コードにこのような文字列がある場合、それがPythonである可能性が高いと考えられます。
+                そのため、上記の文字列モードには、高い関連性があると言えます。
+              </p>
+              <pre><code>{
   <span class="hljs-attr">className</span>: <span class="hljs-string">'string'</span>,
   <span class="hljs-attr">begin</span>: <span class="hljs-string">'r"'</span>, <span class="hljs-attr">end</span>: <span class="hljs-string">'"'</span>,
   <span class="hljs-attr">relevance</span>: <span class="hljs-number">10</span>   <span class="hljs-comment">// 関連性を設定</span>
-}</code></pre><br><p>一方、シングルクォーテーションや、ダブルクオーテーションで囲まれた文字列はどの言語にも当てはまるため、
-特定言語の固有の表現ではなく、モードの関連性を無くすことは、統計的なノイズを減らす意味があります。</p><pre><code>{
+}</code></pre><br>
+              <p>
+                一方、シングルクォーテーションや、ダブルクオーテーションで囲まれた文字列はどの言語にも当てはまるため、
+                特定言語の固有の表現ではなく、モードの関連性を無くすことは、統計的なノイズを減らす意味があります。
+              </p>
+              <pre><code>{
   <span class="hljs-attr">className</span>: <span class="hljs-string">'string'</span>,
   <span class="hljs-attr">begin</span>: <span class="hljs-string">'"'</span>, <span class="hljs-attr">end</span>: <span class="hljs-string">'"'</span>,
   <span class="hljs-attr">relevance</span>: <span class="hljs-number">0</span>    <span class="hljs-comment">// 関連性を無くす</span>
-}</code></pre><br><p><code>relevance</code>のデフォルト値は<code>1</code>です。
-<code>relevance</code>を明示的に設定する場合、
-<code>10</code>または<code>0</code>を指定することをお勧めします。</p><p>キーワードもまた関連性に影響します。
-通常キーワードは、それぞれの関連性は1ですが、
-変数名の形式であっても、その言語以外では見られない固有の名前がいくつかあります。
-例えば、コードのどこかに<code>reinterpret_cast</code>を置くだけで、
-そのコードがC++であると判断できる良い指標になります。
-こういったキーワードには、関連性を少し高く設定する価値があります。
-キーワードへの関連性はパイプを使って設定します。</p><pre><code>{
+}</code></pre><br>
+              <p><code>relevance</code>のデフォルト値は<code>1</code>です。
+                <code>relevance</code>を明示的に設定する場合、
+                <code>10</code>または<code>0</code>を指定することをお勧めします。
+              </p>
+              <p>
+                キーワードもまた関連性に影響します。
+                通常キーワードは、それぞれの関連性は1ですが、
+                変数名の形式であっても、その言語以外では見られない固有の名前がいくつかあります。
+                例えば、コードのどこかに<code>reinterpret_cast</code>を置くだけで、
+                そのコードがC++であると判断できる良い指標になります。
+                こういったキーワードには、関連性を少し高く設定する価値があります。
+                キーワードへの関連性はパイプを使って設定します。
+              </p>
+              <pre><code>{
   <span class="hljs-attr">keywords</span>: <span class="hljs-string">'for if reinterpret_cast|10'</span>
-}</code></pre><br><h2 id="illegal-symbols">不正シンボル</h2><p>言語検出を向上させる別の方法は、モードに対して不正シンボルを定義することです。
-例えば、Pythonのクラス定義(<code>class MyClass(object):</code>)の1行目には、
-<code>{</code>や、改行(<code>\n</code>)を含めることはできません。
-これらのシンボルが存在するならば、言語がPythonでないことが明確なので、
-Pythonであるかどうかという言語検出を早い段階で打ち切ることができます。</p><p>不正シンボルは、単一の正規表現で定義します。</p><pre><code>{
+}</code></pre><br>
+              <h2 id="illegal-symbols">不正シンボル</h2>
+              <p>
+                言語検出を向上させる別の方法は、モードに対して不正シンボルを定義することです。
+                例えば、Pythonのクラス定義(<code>class MyClass(object):</code>)の1行目には、
+                <code>{</code>や、改行(<code>\n</code>)を含めることはできません。
+                これらのシンボルが存在するならば、言語がPythonでないことが明確なので、
+                Pythonであるかどうかという言語検出を早い段階で打ち切ることができます。
+              </p>
+              <p>不正シンボルは、単一の正規表現で定義します。</p>
+              <pre><code>{
   <span class="hljs-attr">className</span>: <span class="hljs-string">'class'</span>,
   <span class="hljs-attr">illegal</span>: <span class="hljs-string">'[${]'</span>
-}</code></pre><br><h2 id="pre-defined-modes">定義済みのモードと正規表現</h2><p>多くの言語が共通のモードと、正表現を共有しています。
-これらは、highlight.jsコードの最後の、
-“Common regexps”と“Common modes”というコメントの以下に記述されています。
-できれば使ってください。</p><br><div class="license"><p>&copy; 2006
- Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for details.</p><p>このコンテンツは<a href="https://highlightjs.readthedocs.io/en/latest/">highlightjsドキュメント</a>を翻訳/改変したものです。</p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="./css/lazy.css" rel="stylesheet"></noscript><script src="./js/main.js" defer></script><script src="./js/highlight.pack.js"></script><div id="src" hidden></div></body></html>
+}</code></pre><br>
+              <h2 id="pre-defined-modes">定義済みのモードと正規表現</h2>
+              <p>
+                多くの言語が共通のモードと、正表現を共有しています。
+                これらは、highlight.jsコードの最後の、
+                “Common regexps”と“Common modes”というコメントの以下に記述されています。
+                できれば使ってください。
+              </p><br>
+              <div class="license">
+                <p>
+                  &copy; 2006
+                   Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for details.
+                </p>
+                <p>このコンテンツは<a href="https://highlightjs.readthedocs.io/en/latest/">highlightjsドキュメント</a>を翻訳/改変したものです。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="./css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/highlight.pack.js"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>
